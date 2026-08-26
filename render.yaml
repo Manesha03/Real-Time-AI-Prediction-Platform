@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: realtime-ai-prediction-api
+    env: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: MODEL_DIR
+        value: models/current
+      - key: MLFLOW_TRACKING_URI
+        sync: false
