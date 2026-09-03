@@ -1,0 +1,2 @@
+[tool.vercel]
+entrypoint = "src.realtime_ai_platform.api.main:app"
