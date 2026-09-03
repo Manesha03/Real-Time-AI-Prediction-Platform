@@ -1,2 +1,23 @@
+[project]
+name = "real-time-ai-prediction-platform"
+version = "1.0.0"
+requires-python = "==3.11.*"
+dependencies = [
+    "fastapi==0.115.6",
+    "uvicorn[standard]==0.34.0",
+    "pandas==2.2.3",
+    "numpy==2.2.1",
+    "scikit-learn==1.6.0",
+    "scipy==1.14.1",
+    "joblib==1.4.2",
+    "mlflow==2.19.0",
+    "prometheus-client==0.21.1",
+    "pydantic==2.10.4",
+    "python-dotenv==1.0.1",
+    "streamlit==1.41.1",
+    "requests==2.32.3",
+    "httpx==0.28.1",
+]
+
 [tool.vercel]
 entrypoint = "src.realtime_ai_platform.api.main:app"
