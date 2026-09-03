@@ -45,6 +45,17 @@ def load_model() -> tuple[object, dict]:
 app = FastAPI(title="Real-Time AI Prediction Platform", version="1.0.0")
 
 
+@app.get("/")
+def root() -> dict:
+    return {
+        "service": "Real-Time AI Prediction Platform API",
+        "status_endpoint": "/health",
+        "api_docs": "/docs",
+        "prediction_endpoint": "/predict",
+        "metrics_endpoint": "/metrics",
+    }
+
+
 @app.get("/health")
 def health() -> dict:
     model_exists = (Path(settings.model_dir) / "model.joblib").exists()

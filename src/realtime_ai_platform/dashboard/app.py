@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
 import pandas as pd
@@ -14,7 +15,7 @@ st.title("Fraud Prediction Control Center")
 
 metadata_path = Path(settings.model_dir) / "metadata.json"
 drift_path = Path(settings.reports_dir) / "drift_report.json"
-api_url = "http://api:8000"
+api_url = os.getenv("API_URL", "http://api:8000").rstrip("/")
 
 
 @st.cache_data(show_spinner=False)
