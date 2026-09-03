@@ -11,6 +11,7 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 
 COPY src ./src
 COPY docs ./docs
+COPY models ./models
 
 EXPOSE 8000
 
