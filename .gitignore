@@ -3,7 +3,10 @@
 __pycache__/
 .pytest_cache/
 *.pyc
-models/
+models/*
+!models/current/
+!models/current/model.joblib
+!models/current/metadata.json
 reports/
 mlruns/
 mlflow/
