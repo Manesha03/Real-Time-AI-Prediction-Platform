@@ -1,5 +1,7 @@
 # Architecture
 
+![MLOps Architecture Diagram](architecture-diagram.png)
+
 ```mermaid
 flowchart LR
     CSV[Incoming transaction data] --> Train[Training pipeline]
