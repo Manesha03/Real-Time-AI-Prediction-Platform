@@ -28,6 +28,8 @@ This project simulates how enterprise AI services are developed, shipped, monito
 
 ## Architecture
 
+![MLOps Architecture Diagram](docs/architecture-diagram.png)
+
 ```mermaid
 flowchart LR
     Data[Transaction Data] --> Train[Training Pipeline]
